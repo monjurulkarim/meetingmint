@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AudioRecord — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6; max-width: 720px; margin: 0 auto; padding: 48px 24px 96px;
+  }
+  h1 { font-size: 2rem; margin-bottom: 4px; }
+  .tagline { color: #888; font-size: 1.1rem; margin-bottom: 32px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+  p, li { color: #444; }
+  ul { padding-left: 20px; margin-top: 6px; }
+  a { color: #0a7cff; }
+  @media (prefers-color-scheme: dark) { p, li { color: #bbb; } }
+  footer { margin-top: 48px; color: #999; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+  <h1>AudioRecord Support</h1>
+  <p class="tagline">Answers to common questions. Stuck? Email us — we reply fast.</p>
+
+  <h2>The app is asking for "Screen &amp; System Audio Recording" — why?</h2>
+  <p>macOS delivers system audio (everything your Mac is playing) through
+  ScreenCaptureKit, which Apple groups under the Screen Recording permission.
+  AudioRecord uses it <strong>only for audio</strong> — it never captures your
+  screen. After granting, macOS requires one app relaunch; AudioRecord shows an
+  alert and relaunches itself for you.</p>
+
+  <h2>The Microphone permission was denied. How do I turn it back on?</h2>
+  <p>Open <strong>System Settings → Privacy &amp; Security → Microphone</strong>,
+  enable AudioRecord, then return to the app. (The app can only appear in that
+  list after it has asked once.) If it still fails, toggle the switch off and on.</p>
+
+  <h2>Where are my recordings?</h2>
+  <p>In the folder shown at the top of the app's Library — by default
+  <code>~/Documents/AudioRecord</code> inside the app's container. You can pick
+  any folder with <strong>Choose Save Folder…</strong>; the app remembers it
+  across launches.</p>
+
+  <h2>What's the difference between WAV and M4A?</h2>
+  <p>WAV is lossless (32-bit float) — best for editing. M4A (AAC) is much
+  smaller — best for sharing. Choose per recording before you hit Record.</p>
+
+  <h2>How does the trial work?</h2>
+  <p>Everything is free and fully functional for 7 days. After that, a one-time
+  purchase unlocks recording forever — no subscription. Restore purchases from
+  <strong>Settings → License</strong> on any Mac signed into the same Apple&nbsp;ID.</p>
+
+  <h2>Recording sounds choppy on my USB microphone</h2>
+  <p>Update to the latest version — the mixer now waits out burst-y USB/Bluetooth
+  microphones instead of inserting silence. If you still hear gaps, email us your
+  mic model and we'll investigate.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:raju.monjurulkarim@gmail.com">raju.monjurulkarim@gmail.com</a> —
+  for bugs, feature requests, or refund questions. Please include your macOS
+  version and mic model if it's audio-related.</p>
+
+  <footer>© 2026 Muhammad Monjurul Karim. · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>
